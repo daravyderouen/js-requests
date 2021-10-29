@@ -3,7 +3,7 @@
 
 
 ////////////////////////////////////////////////
-//console.log('hello')
+console.log('hello')
 // PROBLEM 1
 /*
     In the index.html file in this folder there is a button with an id of 'say-hello-button'!
@@ -45,7 +45,7 @@ function reverseBackground () {
     sayHelloButton.style.color="black";
     //return (document.querySelector("#say-hello-button").style.fontfamily)
 }
-sayHelloButton.addEventListener('mouseout', reverseBackground)
+sayHelloButton.addEventListener("mouseout", reverseBackground)
 // PROBLEM 4
 /*
     Now lets see if we can make a request to our server when we click the button
@@ -65,7 +65,7 @@ const sayHello = () => {
 // DO NOT EDIT FUNCTION
 
 // CODE HERE
-sayHelloButton.addEventListener('click', sayHello)
+sayHelloButton.addEventListener("click", sayHello);
 
 // PROBLEM 5 
 /*
@@ -83,14 +83,14 @@ const ohMy = () => {
 
     axios.get('http://localhost:3000/animals')
 .then (response => {
-    console.log("Response", response.data)
+    console.log("RESPONSE", response)
 })
 .catch (error => {
     console.log("ERROR", error)
 })
 }
 
-document.querySelector('animals-button').addEventListener('click', ohMy)
+document.querySelector('#animals-button').addEventListener("click", ohMy)
 
 
 // PROBLEM 6 
@@ -161,22 +161,22 @@ document.querySelector('#query-button').addEventListener("click", request)
 */
 /
 // Code in the ohMy function in Problem 5
-const newP = () => {
+
     // YOUR CODE HERE
 
     axios.get('http://localhost:3000/animals')
 .then (response => {
     for (i=0; i<ohMy.length; i++){
-        let newP = document.createElement('p')
+         newP = document.createElement('p')
         newP.textContent = response.data[i]
         document.querySelector('body').appendChild(newP)
 
     }
 })
 
-}
 
-document.getElementById('animals-button').addEventListener('click', ohMy)
+
+document.querySelector('#animals-button').addEventListener('click', ohMy)
 
 // PROBLEM 10 
 /*
