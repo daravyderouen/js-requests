@@ -83,7 +83,7 @@ const ohMy = () => {
 
     axios.get('http://localhost:3000/animals')
 .then (response => {
-    console.log("RESPONSE", response)
+    console.log("RESPONSE", response.data)
 })
 .catch (error => {
     console.log("ERROR", error)
@@ -140,7 +140,7 @@ document.querySelector('#repeat-button').addEventListener("click", repeatMyParam
 // CODE HERE
 
 const request = () => {
-axios.get('http://localhost:3000/query-test/?')
+axios.get('http://localhost:3000/query-test/?name=lions')
 .then(response =>{
     console.log("RESPONSE", response)
 })
@@ -159,7 +159,7 @@ document.querySelector('#query-button').addEventListener("click", request)
 
     On each iteration of the loop, create a new p element. Set its textContent equal the string at the current index (i) and then append the new p element onto the document's body. 
 */
-/
+
 // Code in the ohMy function in Problem 5
 
     // YOUR CODE HERE
@@ -188,7 +188,7 @@ document.querySelector('#animals-button').addEventListener('click', ohMy)
 */
 
 // Edit code in Problem 8
-/
+
     axios.get('http://localhost:3000/query-test/?name?lion?&bears')
     .then(response =>{
         console.log("RESPONSE", response.data)
